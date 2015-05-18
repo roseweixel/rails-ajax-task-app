@@ -1,0 +1,19 @@
+<h1>Welcome to Task App!</h1>
+
+<h3>All the tasks:</h3>
+<ul id="task-list">
+  <%= render @tasks %>
+</ul>
+
+<%= form_for Task.new, remote: true do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :status %>
+  <%= f.text_field :status %>
+
+  <%= f.submit %>
+<% end %>

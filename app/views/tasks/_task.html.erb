@@ -1,0 +1,5 @@
+<li id="task-<%= task.id %>">
+<%= task.name %>: <%= task.description %> | <strong><%= task.status %></strong>
+
+<%= link_to 'delete', task_path(task), method: 'delete', data: {confirm: "Are you sure?"}, remote: true %>
+</li>
